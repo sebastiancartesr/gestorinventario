@@ -1,16 +1,14 @@
 package com.gestorinventario.gestorinventario.models;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
-@Entity
+@Entity(name="rol")
 @Table(name = "rol")
 public class Rol {
     @Id
+    //@GeneratedValue(strategy = GenerationType.IDENTITY)
     @Getter @Setter @Column(name="idrol")
     private Integer idrol;
     @Getter @Setter @Column(name="nombre")
