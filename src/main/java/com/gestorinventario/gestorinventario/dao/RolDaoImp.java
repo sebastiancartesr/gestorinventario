@@ -16,7 +16,7 @@ public class RolDaoImp implements RolDao {
 
     @Override
     public List<Rol> getRoles() {
-        String query = "From rol";
-        return entityManager.createQuery(query).getResultList();
+        String query = "select * from rol";
+        return entityManager.createNativeQuery(query).getResultList();
     }
 }
